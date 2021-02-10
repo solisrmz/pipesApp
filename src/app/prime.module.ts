@@ -3,14 +3,15 @@ import { CommonModule } from '@angular/common';
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 import {MenubarModule} from 'primeng/menubar';
-import {MenuItem} from 'primeng/api';
+import {MenuItem, PrimeIcons} from 'primeng/api';
+
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     ButtonModule,
     CardModule, 
-    MenubarModule
+    MenubarModule, 
   ], 
   exports: [
     ButtonModule,
