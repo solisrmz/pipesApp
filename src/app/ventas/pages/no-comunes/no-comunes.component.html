@@ -1,1 +1,52 @@
-<p>no-comunes works!</p>
+<div class="text-layout">
+    <h1>Pipes poco comunes</h1>
+    <p>Pipes incluidos en Angular</p>
+    <div class="p-grid">
+        <div class="p-col-4 p-md-6 p-sm-9">
+            <p-fieldset legend="I18n-Select-pipe" [toggleable]="true">
+                <p>
+                    Saludos {{nombre}}, {{ genero | i18nSelect: opciones }} de SEVER
+                </p>
+                <p-button class="p-button-secondary" (click)="cambiarNombre()">Cambiar nombre</p-button>
+            </p-fieldset>
+        </div>
+        <div class="p-col-4 p-md-6 p-sm-9">
+            <p-fieldset legend="I18n-Plural-Pipe" [toggleable]="true">
+                <p>
+                    Actualmente tenemos {{clientes.length | i18nPlural:clientesOpciones }}
+                </p>
+                <p-button (click)="borrarClientes()" class="p-button-secondary">
+                    Borrar clientes
+                </p-button>
+            </p-fieldset>
+        </div>
+        <div class="p-col-4 p-md-6 p-sm-9">
+            <p-fieldset legend="Slice pipe" [toggleable]="true">
+                <p>
+                    {{clientes | slice:0.2}}
+                </p>
+            </p-fieldset>
+        </div>
+        <div class="p-col-4 p-md-6 p-sm-9">
+            <p-fieldset legend="Json pipe" [toggleable]="true">
+                <pre>{{persona | json }}
+                </pre>
+            </p-fieldset>
+        </div>
+        <div class="p-col-4 p-md-6 p-sm-9">
+            <p-fieldset legend="Key Value pipe" [toggleable]="true">
+                <ul *ngFor="let item of persona | keyvalue">
+                    <li>
+                        {{item.key}}: {{item.value}}
+                    </li>
+                </ul>
+            </p-fieldset>
+        </div>
+        <div class="p-col-4 p-md-6 p-sm-9">
+            <p-fieldset legend="Async pipe" [toggleable]="true">
+                <pre *ngIf="!(valorPromesa | async )">Se está resolviendo la promesa</pre>
+                <pre>{{valorPromesa | async }}</pre>
+            </p-fieldset>
+        </div>
+    </div>
+</div>

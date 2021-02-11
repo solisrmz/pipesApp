@@ -9,6 +9,7 @@ import { VentasModule } from './ventas/ventas.module';
 import localMx  from '@angular/common/locales/es-MX';
 import { registerLocaleData } from '@angular/common'
 import { LOCALE_ID } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 registerLocaleData(localMx);
 
@@ -18,10 +19,11 @@ registerLocaleData(localMx);
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     PrimeModule,
     SharedModule, 
-    VentasModule
+    VentasModule, 
   ],
   providers: [
     {
