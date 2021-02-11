@@ -5,18 +5,20 @@ import { NoComunesComponent } from './pages/no-comunes/no-comunes.component';
 import { BasicosComponent } from './pages/basicos/basicos.component';
 import { OrdenarComponent } from './pages/ordenar/ordenar.component';
 import { PrimeModule } from '../prime.module';
+import { MayusculasPipe } from './pipes/mayusculas.pipe';
 
 @NgModule({
-  declarations: [NumerosComponent, NoComunesComponent, BasicosComponent, OrdenarComponent],
+  declarations: [NumerosComponent, NoComunesComponent, BasicosComponent, OrdenarComponent, MayusculasPipe],
   imports: [
     CommonModule, 
-    PrimeModule
+    PrimeModule, 
   ], 
   exports: [
     BasicosComponent,
     NumerosComponent,
     NoComunesComponent, 
-    OrdenarComponent, 
+    OrdenarComponent,
+    MayusculasPipe 
   ]
 })
 export class VentasModule { }
