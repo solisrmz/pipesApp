@@ -8,7 +8,7 @@ import { Color, Heroe } from '../../interface/heroe.interface';
   ]
 })
 export class OrdenarComponent implements OnInit {
-
+  ordenarPor: string = 'sin valor';
   mayusculas: boolean = false;
   heroes: Heroe[] = [
     {
@@ -26,11 +26,20 @@ export class OrdenarComponent implements OnInit {
       vuela: true,
       color: Color.verde 
     },
+    {
+      nombre: 'Quicksilver',
+      vuela: false,
+      color: Color.azul
+    }
   ];
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  cambiarOrden(valor: string){
+    this.ordenarPor = valor;
   }
   
 
