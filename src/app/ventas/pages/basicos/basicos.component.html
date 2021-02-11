@@ -19,3 +19,41 @@
         </div>
     </div>
 </div>
+<div class="text-layout">
+    <h1>Pipes de fecha</h1>
+    <p>Pipes incluidos en Angular</p>
+    <div class="p-grid">
+        <div class="p-col-6">
+            <p-card header="Fecha">
+                <ul>
+                    <li>Fecha</li>
+                    <li>Fecha</li>
+                    <li>Fecha corta</li>
+                    <li>Fecha long</li>
+                    <li>Fecha custom</li>
+                </ul>
+                <hr/>
+                <ul>
+                    <li>Fecha con zona horaria</li>
+                    <li>Fecha con otro idioma</li>
+                </ul>
+            </p-card>
+        </div>
+        <div class="p-col-6">
+            <p-card header="Fecha">
+                <ul>
+                    <li>{{date}}</li>
+                    <li>{{date | date}}</li>
+                    <li>{{date | date:'short'}}</li>
+                    <li>{{date | date: 'long'}}</li>
+                    <li>{{date | date: 'MMMM dd, yyyy'}}</li>
+                </ul>
+                <hr/>
+                <ul>
+                    <li>{{date | date: 'long': 'GMT-4'}}</li>
+                    <li>{{date | date: 'long':'':'en'}}</li>
+                </ul>
+            </p-card>
+        </div>
+    </div>
+</div>

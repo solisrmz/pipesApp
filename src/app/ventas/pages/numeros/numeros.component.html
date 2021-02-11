@@ -1,1 +1,21 @@
-<p>numeros works!</p>
+<div class="text-layout">
+    <h1>Pipes de números</h1>
+    <p>Pipes incluidos en Angular</p>
+    <div class="p-grid">
+        <div class="p-col-4">
+            <p-card header="Ventas netas" subheader="Ventas del año">
+                <hr/> {{ventas | number: '1.2-2'}}
+            </p-card>
+        </div>
+        <div class="p-col-4">
+            <p-card header="Ventas" subheader="ventas del año">
+                <hr/> {{ (ventas + 1000000) | currency:'MXN':'symbol-narrow':'1.4-4' }}
+            </p-card>
+        </div>
+        <div class="p-col-4">
+            <p-card header="Porcentaje de ventas" subheader="Porcentaje de las ventas del año">
+                <hr/> {{ porcentaje | percent: '2.2-2' }}
+            </p-card>
+        </div>
+    </div>
+</div>

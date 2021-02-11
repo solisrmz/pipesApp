@@ -20,7 +20,7 @@ export class MenuBarComponent implements OnInit {
                     {
                         label: 'Textos y fechas', 
                         icon: 'pi pi-align-left',
-                        routerLink: ''
+                        routerLink: '/'
                         
                     }, 
                     {
